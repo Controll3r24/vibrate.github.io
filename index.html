@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#faf9f5">
+<title>Vibra — fai vibrare il telefono</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main id="app" hidden>
+  <header>
+    <h1>Vibra</h1>
+    <p class="sub">Fai vibrare il telefono come una notifica, o come una carezza lenta.</p>
+  </header>
+
+  <section class="dial" aria-live="polite">
+    <svg viewBox="0 0 120 120" aria-hidden="true">
+      <circle class="track" cx="60" cy="60" r="54"/>
+      <circle id="ring" class="ring" cx="60" cy="60" r="54"/>
+    </svg>
+    <button id="go" type="button">Avvia</button>
+    <p id="status">Scegli un ritmo e una durata.</p>
+  </section>
+
+  <section>
+    <h2>Ritmo</h2>
+    <div id="patterns" class="list" role="radiogroup" aria-label="Ritmo"></div>
+  </section>
+
+  <section>
+    <h2>Durata</h2>
+    <div id="durations" class="chips" role="radiogroup" aria-label="Durata"></div>
+  </section>
+
+  <p id="note" class="note"></p>
+</main>
+
+<main id="blocked" hidden>
+  <h1>Vibra</h1>
+  <p class="sub">Questo sito funziona solo da telefono.</p>
+  <p class="note">Un computer non ha un motorino di vibrazione. Apri questo indirizzo dal browser del tuo iPhone o del tuo telefono Android.</p>
+</main>
+
+<label id="haptic" hidden><input type="checkbox" switch></label>
+<script src="script.js"></script>
+</body>
+</html>
